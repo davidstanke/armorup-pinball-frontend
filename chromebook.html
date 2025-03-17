@@ -7,6 +7,13 @@
   <title>Chromebook</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    body {
+      background-image: url('img/bg-chromebook.svg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -26,6 +33,16 @@
       font-weight: 700;
       border-radius: 50vh;
       padding: 16px 32px;
+    }
+
+    .cloud-logo {
+      width: 50px;
+      height: 40px;
+      margin-left: 20px;
+      background-image: url('img/cloud-logo.svg');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     .prompts {
@@ -49,7 +66,7 @@
 
 <body>
   <header>
-    <div class="cloud-logo">O</div>
+    <div class="cloud-logo"></div>
     <div class="how-it-works">
       <button class="text-3d box-3d">How it works</button>
     </div>
