@@ -47,14 +47,10 @@ h1 {
 
 .text-3d {
   paint-order: stroke fill;
-  -webkit-text-stroke: 1px var(--background);
-  text-shadow: 1px 1px 0px var(--background);
+  -webkit-text-stroke: .08em var(--background);
+  text-shadow: .08em .08em 0px var(--background);
 }
 
-button {
-  border-style: solid;
-  font-family: inherit;
-}
 
 form {
   display: flex;
@@ -75,4 +71,20 @@ input[type="text"] {
 
 input[type="text"]::placeholder {
   color:var(--light-grey);
+}
+
+button.arrow {
+  width:4em;
+  height:4em;
+  background: transparent;
+  background-image: url('img/arrow.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border:none !important;
+  outline:none;
+  background-blend-mode: lighten;
+  /* TODO: replace this with a "color-mix" */
+  background-color: rgba(255,255,255,0.6);
+  cursor:pointer;
 }
