@@ -31,8 +31,18 @@ body {
   padding: 0;
   background-color: var(--background);
   color: var(--white);
-  font-size: 16px;
+  font-size: 20px;
+  font-weight:500;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
+  
+  a, a:visited {
+    color: var(--white);
+    text-decoration: none;
+    font-weight:600;
+  }
 
 h1 {
   text-align: center;
@@ -41,50 +51,53 @@ h1 {
 }
 
 .box-3d {
-  stroke: 1px solid var(--background);
+  border: 2px solid var(--background);
   box-shadow: 1px 2px 0px 2px var(--background);
 }
 
 .text-3d {
   paint-order: stroke fill;
-  -webkit-text-stroke: .08em var(--background);
-  text-shadow: .08em .08em 0px var(--background);
+  -webkit-text-stroke: 0.08em var(--background);
+  text-shadow: 0.08em 0.08em 0px var(--background);
 }
-
 
 form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 28px;
+  padding-left: 48px;
   background-color: var(--white);
-  border-radius:50vh;
+  border-radius: 50vh;
 }
 input[type="text"] {
   width: 100%;
   border: none;
-  font-size: 24px;
-  font-weight:600;
+  text-overflow: ellipsis;
+  font-size: 32px;
+  font-weight: 600;
   font-family: inherit;
-  outline:none;
+  outline: none;
+  color:var(--background);
 }
 
 input[type="text"]::placeholder {
-  color:var(--light-grey);
+  color: var(--light-grey);
 }
 
 button.arrow {
-  width:4em;
-  height:4em;
+  width: 4em;
+  height: 4em;
   background: transparent;
-  background-image: url('img/arrow.svg');
+  background-image: url("img/icon-arrow.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  border:none !important;
-  outline:none;
+  border: none !important;
+  outline: none;
+  /* background-blend-mode allows us to fade the background image into the background color */
   background-blend-mode: lighten;
-  /* TODO: replace this with a "color-mix" */
-  background-color: rgba(255,255,255,0.6);
-  cursor:pointer;
+  /* TODO: replace background color with a "color-mix" */
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
